@@ -1,4 +1,5 @@
 {
-  "name": "reddishApp",
-  "displayName": "reddishApp"
+  "expo": {
+    "sdkVersion": "27.0.0"
+  }
 }

@@ -11,7 +11,7 @@ export default class createAccount extends React.Component {
             full
             rounded>         
 
-            <Text style={{color: 'white'}}> Sign Up</Text>
+            <Text style={{color: 'purple'}}> Sign Up</Text>
 
           </Button>
         </View>

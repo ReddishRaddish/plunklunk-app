@@ -3,6 +3,7 @@ import {View, Text, StyleSheet, Dimensions} from 'react-native';
 import {Button} from 'native-base';
 
 
+
 export default class createAccount extends React.Component {
   render() {
       return(

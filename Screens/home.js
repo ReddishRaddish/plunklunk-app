@@ -3,27 +3,27 @@ import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
 import { AppRegistry, TextInput} from 'react-native';
 
 
-const padOn = require("./pics/padSelected.png");
-const padOff = require("./pics/padGrey.png");
+const padOn = require("../pics/padSelected.png");
+const padOff = require("../pics/padGrey.png");
 
 
 export default class App extends React.Component {
   
     constructor(props) {
         super(props);
-        this.state = { uriPad: require("./pics/padGrey.png"),
-                      uriTamp: require("./pics/tamponGrey.png"),
+        this.state = { uriPad: require("../pics/padGrey.png"),
+                      uriTamp: require("../pics/tamponGrey.png"),
                      text: ''};
     }
     changeLogo() {
         console.log('state changed!');
-        if(this.state.uriPad == require("./pics/padGrey.png"))
+        if(this.state.uriPad == require("../pics/padGrey.png"))
             this.setState({
-                uriPad: require("./pics/padSelected.png")
+                uriPad: require("../pics/padSelected.png")
             }); 
-        if(this.state.uriPad == require("./pics/padSelected.png"))
+        if(this.state.uriPad == require("../pics/padSelected.png"))
             this.setState({
-                uriPad: require("./pics/padGrey.png")
+                uriPad: require("../pics/padGrey.png")
             });     
         
         
@@ -32,13 +32,13 @@ export default class App extends React.Component {
    changeLogotamp() {
        
        console.log('state changed!');
-       if(this.state.uriTamp == require("./pics/tamponGrey.png"))
+       if(this.state.uriTamp == require("../pics/tamponGrey.png"))
             this.setState ({
-                uriTamp: require("./pics/tamponSelected.png")
+                uriTamp: require("../pics/tamponSelected.png")
             }); 
-       if(this.state.uriTamp == require("./pics/tamponSelected.png"))
+       if(this.state.uriTamp == require("../pics/tamponSelected.png"))
             this.setState ({
-                uriTamp: require("./pics/tamponGrey.png")
+                uriTamp: require("../pics/tamponGrey.png")
             });
        
    }
@@ -47,7 +47,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.outer}>
         
-        <Image source={require("./pics/top.png")} style={styles.outterImage}/>
+        <Image source={require("../pics/top.png")} style={styles.outterImage}/>
         
         <View style={styles.textcontainer}>
         <Text style={styles.text}>What do you need? </Text>
@@ -77,7 +77,7 @@ export default class App extends React.Component {
         onChangeText={(text) => this.setState({text})}
     />
     
-        <Image source={require("./pics/bottom.png")} style={styles.outterImage}/>
+        <Image source={require("../pics/bottom.png")} style={styles.outterImage}/>
         
     </View>
     );

@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import {createStackNavigator} from 'react-navigation';
-import home from './Screens/home'
+import home from './Screens/home';
+import NUX1 from './Screens/NUX1'
 
 export default class App extends React.Component {
   render() {
@@ -12,6 +13,7 @@ export default class App extends React.Component {
 } 
 
 const AppStackNavigator = createStackNavigator({
+  NUX1: {screen: NUX1},
   home: {screen: home},
 });
 

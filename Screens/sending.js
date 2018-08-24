@@ -6,26 +6,21 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         
-        <Image source={require("/Users/ricardadallmann/Downloads/plunklunk-app/pics/RequestSending.jpg")} style={styles.container}/> )
-    
-        
-        
-        
-    
-        
-       <Text style={styles.text}> sending your request ... </Text> 
+        <Image source={require("../pics/RequestSending.jpg")}/> 
+ 
+        <Text style={styles.text}> sending your request ... </Text> 
 
-        </View>
+    </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
+    
   container: { 
-    marginTop: 50,
-    paddingTop: 140,
-    flexDirection: 'column',
+    flex: 1,
     backgroundColor: '#fff',
+    flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
     //height: '100%',
@@ -33,12 +28,11 @@ const styles = StyleSheet.create({
     
   },
     
-    text: {
+    text:{
         color: '#D1C4E1',
         fontSize: 25,
         alignItems: 'center',
-        justifyContent: 'space-evenly',
-        position: 'absolute',
+        justifyContent: 'center',
         bottom: -180
     },
 });

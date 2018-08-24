@@ -11,13 +11,13 @@ export default class App extends React.Component {
   
     constructor(props) {
         super(props);
-        this.state = { uriYes: require("../pics/yesbutton.png"),
-                      uriNo: require("../pics/nobutton.png"),
+        this.state = { uriYes: require("../pics/yesButton.png"),
+                      uriNo: require("../pics/noButton.png"),
                      text: ''};
     }
     changeYes() {
         console.log('state changed!');
-        if(this.state.uriYes == require("../pics/yesbutton.png"))
+        if(this.state.uriYes == require("../pics/yesButton.png"))
             this.setState({
                 uriYes: require("../pics/blueYesButton.png")
             });    
@@ -37,26 +37,25 @@ export default class App extends React.Component {
     
     render() {
     return (
+        <View>
+            <View style={styles.textcontainer}>
+                <Text style={styles.text}>Accept? </Text>
+            </View>
 
-        <View style={styles.textcontainer}>
-        <Text style={styles.text}>Accept? </Text>
+
+            <View style={styles.container}>
+
+                <TouchableOpacity onPress={() => this.changeNo()} style={styles.button}>
+                    <Image source={this.state.uriNo}/> 
+                </TouchableOpacity>
+
+                <TouchableOpacity onPress={() => this.changeYes()} style={styles.button}>
+                    <Image source={this.state.uriYes}/> 
+                </TouchableOpacity>
+
+            </View>
         </View>
         
-        
-    <View style={styles.container}>
-  
-        <TouchableOpacity onPress={() => this.changeNo()} style={styles.button}>
-            <Image source={this.state.uriNo}/> 
-        </TouchableOpacity>
-        
-        <TouchableOpacity onPress={() => this.changeYes()} style={styles.button}>
-            <Image source={this.state.uriYes}/> 
-        </TouchableOpacity>
-        
-    </View>
-        
-
-    </View>
     );
   }
   

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+rimport React, { Component } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
 import { AppRegistry, TextInput} from 'react-native';
 
@@ -47,10 +47,18 @@ export default class App extends React.Component {
 
                 <TouchableOpacity onPress={() => this.changeNo()} style={styles.button}>
                     <Image source={this.state.uriNo}/> 
+                        
+                onPress={()=this.props.navigation.goBack()
+                } />       
+                        
+                        
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => this.changeYes()} style={styles.button}>
                     <Image source={this.state.uriYes}/> 
+                        
+                onPress={() => navigate('sending')}
+
                 </TouchableOpacity>
 
             </View>
